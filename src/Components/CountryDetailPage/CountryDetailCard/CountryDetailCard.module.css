@@ -1,0 +1,48 @@
+.link {
+  text-decoration: none;
+  border: radius 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1.5rem;
+}
+.link[theme="dark"] {
+  color: rgba(255, 255, 255, 0.9);
+  background-color: #2b3945;
+}
+.link[theme="dark"]:hover {
+  background-color: #fafafa;
+  color: #2b3945;
+}
+.link[theme="light"] {
+  color: #2b3945;
+  background-color: #fafafa;
+}
+.link[theme="light"]:hover {
+  background-color: #2b3945;
+  color: #fafafa;
+}
+.backButton {
+  margin-top: 2rem;
+  margin-left: 5vw;
+
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.3);
+}
+.CountryDetailCardContainer[theme="dark"] {
+  background-color: #2b3945;
+  color: #fafafa;
+}
+.CountryDetailCardContainer[theme="light"] {
+  background-color: #fafafa;
+}
+.CountryDetailCardContainer {
+  min-height: 89.3vh;
+
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 1rem;
+}
