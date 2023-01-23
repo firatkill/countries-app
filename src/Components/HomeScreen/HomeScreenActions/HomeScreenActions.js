@@ -8,7 +8,7 @@ function HomeScreenActions() {
   const theme = useSelector((state) => state.ui.theme);
   const dispatch = useDispatch();
   const inputRef = useRef();
-  const selectedRegion = useSelector((state) => state.ui.selectedRegion);
+
   const filterValue = useSelector((state) => state.ui.filterValue);
   const changeHandler = (e) => {
     dispatch(uiActions.assignSelectedRegion(e.currentTarget.value));

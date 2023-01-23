@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 function CountryCardsContainer() {
   const styled = CountryCardsContainerCSS;
   const filterValue = useSelector((state) => state.ui.filterValue);
+
   const data = JSON.parse(sessionStorage.getItem("countries"));
   const selectedRegion = useSelector((state) => state.ui.selectedRegion);
   return (
@@ -17,7 +18,11 @@ function CountryCardsContainer() {
           )
           .map((country) => {
             return (
-              <Link className={styled.link} to={`/${country.name.official}`}>
+              <Link
+                key={data.indexOf(country)}
+                className={styled.link}
+                to={`/${country.name.official}`}
+              >
                 <Card
                   key={data.indexOf(country)}
                   flag={country.flags.svg}

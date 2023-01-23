@@ -1,8 +1,18 @@
-export const fetchCountries = async () => {
-  if (sessionStorage.getItem("countries") === null) {
+import React, { useState } from "react";
+export const useFetch = () => {
+  const [isLoading, setIsLoading] = useState(
+    localStorage.getItem("countries") === null
+  );
+
+  const useFetchCountries = async () => {
     const response = await fetch("https://restcountries.com/v3.1/all");
     const data = await response.json();
-    console.log("fetched");
     sessionStorage.setItem("countries", JSON.stringify(data));
-  }
+    setIsLoading(false);
+  };
+  return {
+    isLoading: isLoading,
+
+    fetchCountries: useFetchCountries,
+  };
 };

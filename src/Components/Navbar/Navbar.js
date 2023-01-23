@@ -12,9 +12,6 @@ function Navbar() {
   const modeSwitchHandler = () => {
     dispatch(uiActions.switchMode());
   };
-  useEffect(() => {
-    fetchCountries();
-  }, []);
 
   return (
     <div theme={theme} className={styled.NavbarContainer}>
