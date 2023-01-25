@@ -10,6 +10,7 @@ export const useFetch = () => {
     sessionStorage.setItem("countries", JSON.stringify(data));
     setIsLoading(false);
   };
+  console.log("fetched");
   return {
     isLoading: isLoading,
 

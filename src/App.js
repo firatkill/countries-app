@@ -7,7 +7,12 @@ import Spinner from "./Components/UI/Spinner/Spinner";
 import { useFetch } from "./Hooks/fetchCountries";
 function App() {
   const { isLoading, fetchCountries } = useFetch();
-  fetchCountries();
+
+  const data = JSON.parse(localStorage.getItem("countries"));
+
+  useEffect(() => {
+    fetchCountries();
+  }, [data, fetchCountries]);
 
   if (isLoading) {
     return <Spinner />;

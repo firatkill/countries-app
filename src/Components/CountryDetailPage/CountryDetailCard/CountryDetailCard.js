@@ -12,7 +12,6 @@ function CountryDetailCard(props) {
   const country = countryList.find(
     (elem) => elem.name.official === countryName
   );
-  console.log(country);
 
   return (
     <div theme={theme} className={styled.CountryDetailCardContainer}>

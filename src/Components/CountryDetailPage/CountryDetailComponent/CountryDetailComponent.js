@@ -19,7 +19,6 @@ function CountryDetailComponent(props) {
     names.push(country.name.nativeName[`${somename}`].official);
   }
 
-  console.log(country);
   return (
     <div className={styled.CountryDetailComponentContainer}>
       <div className={styled.imgWrapper}>
